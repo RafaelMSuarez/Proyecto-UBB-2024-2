@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:openfoodfacts/openfoodfacts.dart';
-import 'package:proyecto_ubb/models/agent_model.dart';
 import 'package:proyecto_ubb/pages/home_page/widgets/product_card.dart';
 import 'package:proyecto_ubb/pages/product_page/product_page.dart';
 import 'package:proyecto_ubb/services/custom_exceptions.dart';
-import 'package:proyecto_ubb/services/firebase_service.dart';
 import 'package:proyecto_ubb/services/open_food_facts_service.dart';
 import 'package:proyecto_ubb/style/padding_style.dart';
 import 'package:proyecto_ubb/utils/custom_cpi.dart';
@@ -24,7 +22,6 @@ class _HomePageState extends State<HomePage> {
   String _scanBarcode = "";
   String? searchQuery;
   late Future<List<Product>?> _products;
-  final _firebaseService = FirebaseService();
 
   bool loading = false;
 
